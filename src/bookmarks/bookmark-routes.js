@@ -47,13 +47,13 @@ bookmarkRouter
           return res.status(400).send('Invalid data');
      }
 
-     const bookmark = { bookmark_id: uuid(), title, url, desc, rating }
+     const bookmark = { id: uuid(), title, url, desc, rating }
 
      bookmarks.push(bookmark)
 
-     logger.info(`Bookmark with id ${bookmark_id} created`);
+     logger.info(`Bookmark with id ${bookmark.id} created`);
 
-     res.status(201).location(`http://localhost:8000/bookmarks/${bookmark_id}`)
+     res.status(201).location(`http://localhost:8000/bookmarks/${bookmark.id}`)
      })
 
 // app.get('/bookmarks/:bookmark_id', (req, res) => {

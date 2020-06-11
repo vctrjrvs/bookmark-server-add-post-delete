@@ -7,6 +7,7 @@ const { NODE_ENV } = require('./config')
 const validateBearerToken = require('./validate-bearer-token');
 const errorHandler = require('./error-handler');
 const bookmarkRouter = require('./bookmarks/bookmark-routes');
+const BookmarksService = require('./bookmarks-service')
 
 const app = express()
 
